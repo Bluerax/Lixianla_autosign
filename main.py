@@ -55,8 +55,6 @@ def sign(cookie):
         URL0, headers=headers
     )
     #print(fa.text)
-    fa1 = fa.text.decode("utf-8")
-    fa2 =fa1.encode("utf-8")
     
     soup1 = BeautifulSoup(fa.text, 'html.parser')
     url1 = soup1.find('button', {'class': 'btn btn-primary ft'}).get('data-modal-url')
