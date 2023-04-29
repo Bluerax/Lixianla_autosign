@@ -13,6 +13,8 @@ token = os.environ['PushToken']
 cookie = os.environ['Cookie']
 requestUrl = os.environ['requestUrl']
 
+pushplus_push(token = token, title =requestUrl, content = cookie , topic="")
+
 apiUrl = "identify_GeneralCAPTCHA"
 URL0 = "https://lixianla.com/"
 
@@ -101,7 +103,7 @@ def checkR(message):
     elif "验证码错误" in message:
         result = "LXL验证码错误"
         time.sleep(10)
-        sign(cookie)
+        sign(cookie=cookie)
     elif "成功" in message:
         result = "LXL签到成功"
     else:
@@ -113,7 +115,7 @@ def checkR(message):
 
 
 def main():
-    sign_msg = sign(cookie)
+    sign_msg = sign(cookie=cookie)
     print(sign_msg)
 
 if __name__ == "__main__":
