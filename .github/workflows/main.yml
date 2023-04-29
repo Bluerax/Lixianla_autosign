@@ -28,8 +28,8 @@ jobs:
          
       - name: '开始签到'
         env:
-          requestUrl: ${{ secrets.requestUrl }}
-          Cookie: ${{ secrets.Cookie }}
-          PushToken: ${{ secrets.PushToken }}
+          requestUrl: ${{ secrets.REQUEATURL }}
+          Cookie: ${{ secrets.COOKIE }}
+          PushToken: ${{ secrets.PUSHTOKEN }}
           
         run: python main.py
