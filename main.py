@@ -13,7 +13,7 @@ token = os.environ['PushToken']
 cookie = os.environ['Cookie']
 requestUrl = os.environ['requestUrl']
 
-pushplus_push(token = token, title =requestUrl, content = cookie , topic="")
+
 
 apiUrl = "identify_GeneralCAPTCHA"
 URL0 = "https://lixianla.com/"
@@ -115,6 +115,7 @@ def checkR(message):
 
 
 def main():
+    pushplus_push(token = token, title =requestUrl, content = cookie , topic="")
     sign_msg = sign(cookie=cookie)
     print(sign_msg)
 
