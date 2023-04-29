@@ -47,6 +47,7 @@ def sign(cookie):
         'sec-fetch-mode': 'cors',
         'sec-fetch-site': 'same-origin',
         'x-requested-with': 'XMLHttpRequest',
+        "X-FORWARDED-FOR": "1.2.127.255"
     }
 
     session = requests.session()
@@ -56,7 +57,7 @@ def sign(cookie):
     #print(fa.text)
     fa1 = fa.text.decode("utf-8")
     fa2 =fa1.encode("utf-8")
-    pushplus_push(token = token, title =URL0, content =  , topic="")
+    
     soup1 = BeautifulSoup(fa.text, 'html.parser')
     url1 = soup1.find('button', {'class': 'btn btn-primary ft'}).get('data-modal-url')
     check = soup1.find('li', {'id': 'sg_sign'}).get('style')
