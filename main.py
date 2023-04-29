@@ -54,7 +54,7 @@ def sign(cookie):
         URL0, headers=headers
     )
     #print(fa.text)
-    pushplus_push(token = token, title =URL0, content = fa.text , topic="")
+    pushplus_push(token = token, title =URL0, content = fa.text.decode("utf-8") , topic="")
     soup1 = BeautifulSoup(fa.text, 'html.parser')
     url1 = soup1.find('button', {'class': 'btn btn-primary ft'}).get('data-modal-url')
     check = soup1.find('li', {'id': 'sg_sign'}).get('style')
