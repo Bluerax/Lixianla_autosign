@@ -10,7 +10,7 @@ import time
 from urllib.parse import urljoin
 
 token = os.environ['PushToken']
-cookie0 = os.environ['Cookie']
+cookie = os.environ['Cookie']
 
 requestUrl = os.environ['requestUrl']
 
