@@ -24,7 +24,7 @@ jobs:
           pip install --upgrade pip
           python -m pip install --upgrade requests
           pip install beautifulsoup4
-          pip install urllib.parse
+      
          
       - name: '开始签到'
         env:
